@@ -30,10 +30,6 @@ const useDeepStreamDataMock = (delay = 100, start = false) => {
       setData(obj);
     }, delay);
 
-    if (!start) {
-      console.log("STOP");
-      clearInterval(interval);
-    }
     return () => {
       clearInterval(interval);
     };
